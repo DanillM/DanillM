@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door Game</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="header">
+        <img src="./images/logo.svg" alt="Logo">
+    </div>
+
+    <div class="first-row">
+        <img src="./images/star.svg" alt="Star">
+        <p class="instructions-title" id="instructions-title">Instructions</p>
+        <img src="./images/star.svg" alt="Star">
+    </div>
+
+<div id ="instructions-content" class="hidden">
+    <table class="second-row">
+      <tr>
+        <td class="instructions-number">1</td>
+        <td class="instructions-text">Hiding behind one of these doors is a Bot.</td>
+      </tr>
+      <tr>
+        <td class="instructions-number">2</td>
+        <td class="instructions-text">Your mission is to open all of the doors without running into the Bot.</td>
+      </tr>
+      <tr>
+        <td class="instructions-number">3</td>
+        <td class="instructions-text">If you manage to avoid the Bot until the very last door, you win!</td>
+      </tr>
+      <tr>
+        <td class="instructions-number">4</td>
+        <td class="instructions-text">See if you can score a winning streak!</td>
+      </tr>
+    </table>
+</div>
+
+    <div class="door-row">
+        <img class="door-frame" src="./images/closed_door.svg" id="door1" alt="Door 1">
+        <img class="door-frame" src="./images/closed_door.svg" id="door2" alt="Door 2">
+        <img class="door-frame" src="./images/closed_door.svg" id="door3" alt="Door 3">
+    </div>
+
+    <div class="start-row" id="start">Good luck!</div>
+
+    <table class="score-row">
+        <tr>
+            <th class="score-text">Current streak:</th>
+            <th class="score-text">Best streak:</th>
+        </tr>
+        <tr>
+            <th class="score-box" id="score-number">0</th>
+            <th class="score-box" id="high-score-number">0</th>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="script.js"></script>
+	<script>
+	document.getElementById("instructions-title").addEventListener("click", hideInstructions);
+
+	function hideInstructions() {
+    const instructions = document.getElementById("instructions-content");
+    instructions.classList.toggle("hidden"); // Toggles the hidden class
+	}
+	</script>
+</body>
+</html>
